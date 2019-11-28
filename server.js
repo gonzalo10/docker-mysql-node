@@ -6,9 +6,9 @@ const app = express();
 const PORT = 3001;
 const HOST = '127.0.0.1';
 
-const sequelize = new Sequelize('gonzaloTest', 'root', 'root', {
+const sequelize = new Sequelize('', 'root', 'root', {
 	dialect: 'mysql',
-	port: 3301,
+	port: 3309,
 	pool: {
 		max: 10,
 		min: 0,
@@ -18,6 +18,9 @@ const sequelize = new Sequelize('gonzaloTest', 'root', 'root', {
 });
 
 // to run on docker docker run -p 3001:3001 test-node-app
+// sequelize2.authenticate().then(function(errors) {
+// 	console.log(errors);
+// });
 
 try {
 	sequelize
